@@ -111,17 +111,81 @@ Example: maxOfThree(17, 4, 9) should return 17.
 
 Complete the exercise in the space below:
 */
-function maxOfThree (num1, num2,num3){
-if(num1 > num2 && num1 >num3){
-  return num1
-}
-if(num2 > num1 && num2 >num3){
-  return num2
-}
-else{
-  return num3
-}
-
+function maxOfThree(num1, num2, num3) {
+  if (num1 > num2 && num1 > num3) {
+    return num1
+  }
+  if (num2 > num1 && num2 > num3) {
+    return num2
+  } else {
+    return num3
+  }
 }
 
-console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
+console.log('Exercise 6 Result:', maxOfThree(5, 10, 8))
+/*
+Exercise 7: calculateTip()
+
+Create a function called calculateTip. It should take two arguments:
+the bill amount and the tip percentage (as a whole number).
+The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+function calculateTip(bill, percentage) {
+  return bill * (percentage / 100)
+}
+
+console.log('Exercise 7 Result:', calculateTip(50, 20))
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature.
+It takes two arguments: a temperature and a string representing the
+scale ('C' for Celsius, 'F' for Fahrenheit).
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+function convertTemperature(temp, scale) {
+  if (scale == 'C') {
+    return (temp * 9.0) / 5.0 + 32.0
+  } else if (scale == 'F') {
+    return ((temp - 32 == 'C') * 5) / 9
+  }
+}
+
+console.log('Exercise 8 Result:', convertTemperature(32, 'C'))
+/*
+Exercise 9: basicCalculator()
+
+Create a function named basicCalculator.
+It should take three arguments: two numbers and a string representing
+an operation ('add', 'subtract', 'multiply', 'divide').
+Perform the provided operation on the two numbers.
+In operations where the order of numbers is important,
+treat the first parameter as the first operand and the
+second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+
+function basicCalculator(num1, num2, operation) {
+  let result
+  if (operation === 'add') {
+    result = num1 + num2
+  } else if (operation === 'subtract') {
+    result = num1 - num2
+  }
+  return result
+}
+
+console.log('Exercise 9 Result:', basicCalculator(10, 5, 'subtract'))
